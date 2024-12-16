@@ -1,0 +1,167 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(100, 150, 190);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Sticky header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #24576d;
+    flex-wrap: wrap;
+  }
+  
+  header.scrolled { 
+    background-color: #444; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  header h1 {
+    font-size: 1.5em;
+    color: #fff;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar ul li a::after { 
+    content: ''; 
+    position: absolute; 
+    width: 100%; 
+    transform: scaleX(0); 
+    height: 2px; 
+    bottom: 0; 
+    left: 0; 
+    background-color: #ff4500; 
+    transform-origin: bottom right; 
+    transition: transform 0.25s ease-out; 
+  }
+  
+  .navbar ul li a:hover::after { 
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
+  }
+  
+  .navbar ul li a:hover {
+    color: #ff4500; /* Change text color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px; /* Space between the navbar items and social icons */
+  }
+  
+  .social-icon {
+    color: #0077b5; /* LinkedIn blue */
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 5px;
+  }
+  
+  .social-icon:hover {
+    color: #005582; /* Darker LinkedIn blue on hover */
+    transition: color 0.3s ease; /* Smooth transition */
+  }
+  
+  
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('portfolio-background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    color: #fff;
+  }
+  
+  .hero-content {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  .hero .greeting { 
+    display: block; 
+    text-align: left; 
+    font-size: 1em; 
+    margin-bottom: 0; 
+  }
+  
+  .hero .name { 
+    display: block; 
+    text-align: left; 
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .hero-container {
+    flex: 1;
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom of the container */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .hero-image {
+    background: url('portfolio-portrait.png') no-repeat center center/cover;
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    margin-bottom: 50px; /* Custom margin from the bottom */
+  }
+  
+  .hero-image img {
+    border-radius: 50%; /* Make the image circular */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  }
+  
